@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Serif", serif;
+    overflow-x: hidden; /* This Prevents horizontal scroll */
+    overflow-y: hidden; /* This Prevents horizontal scroll */
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px; /* Adjusted padding for better balance */
+}
+
+
+.left-side {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.left-side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Push background behind everything */
+}
+
+
+
+.right-side {
+    position: absolute;
+    top: 50%; /* Move top edge to 50% of container height */
+    left: 50%; /* Move left edge to 50% of container width */
+    transform: translate(-50%, -50%); /* Move left side back to center */
+    z-index: 1000; /* Ensure left side stays on top */
+    width: 35%;
+    padding: 20px;
+}
+
+.right-side .login-box {
+    background-color: rgba(246, 245, 242, 0.7); /* Slight transparency */
+    padding: 30px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    margin: 0 auto;
+    z-index: 1000; /* Ensure form stays on top */
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #333;
+}
+
+.input-box {
+    margin-bottom: 30px;
+}
+
+.input-box label {
+    display: block;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px; /* Increased size for better readability */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition on focus */
+}
+
+.input-box input:focus {
+    border-color: #b2b991;
+    box-shadow: 0 0 5px rgba(64, 192, 181, 0.3); /* Adds a soft glow on focus */
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px; /* Increased padding for better clickability */
+    background-color:#787d62;;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+   
+}
+
+.btn:hover {
+    background-color: #b1bb8b;
+    transform: scale(1.05); /* Adds a slight scaling effect on hover */
+}
+
+.forgot-password {
+    text-align: center;
+}
+.forgot-password a{
+    color: #3a3b2f;
+    text-decoration: none;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #787d62;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: rgb(148, 5, 5);
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Add media queries for different screen sizes */
+
+/* For screens smaller than 768px (tablets and mobile devices) */
+@media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack the left and right sides vertically */
+    }
+  
+    .left-side {
+      height: 40vh; /* Adjust the height of the left side */
+    }
+  
+    .right-side {
+      position: relative; /* Change the position to relative */
+      top: auto; /* Remove the top positioning */
+      left: auto; /* Remove the left positioning */
+      transform: none; /* Remove the transform */
+      width: 80%; /* Adjust the width of the right side */
+      margin: 20px auto; /* Add some margin to center the right side */
+    }
+  
+    .right-side .login-box {
+      max-width: 300px; /* Adjust the max-width of the login box */
+    }
+  }
+  
+  /* For screens smaller than 480px (smaller mobile devices) */
+  @media only screen and (max-width: 480px) {
+    .right-side {
+      width: 90%; /* Adjust the width of the right side */
+    }
+  
+    .right-side .login-box {
+      max-width: 250px; /* Adjust the max-width of the login box */
+    }
+  
+    .input-box input {
+      padding: 10px; /* Reduce the padding of the input fields */
+    }
+  
+    .btn {
+      padding: 10px; /* Reduce the padding of the button */
+    }
+  }

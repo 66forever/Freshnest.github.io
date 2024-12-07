@@ -1,0 +1,347 @@
+/*******     HOME PART    ******  */
+
+.home {
+  display: flex; /* Enables flexbox layout */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 5px; /* Adjust this value to provide enough space between sections */
+}
+
+
+.homepage-image1 {
+  width: 100%;
+  height: auto; /* You can change this value to adjust the height */
+  max-width: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  display: block;
+  position: relative; /* Keeps the image in the document flow */
+  z-index: 1; /* Ensure this is behind the .home-content */
+
+}
+
+.home-content {
+  position: absolute; /* Overlay on top of .homepage-image1 */
+  z-index: 3; /* Above the .homepage-image1 */
+  top: 57%; /* Center vertically */
+  left: 37%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset by 50% of the element's size */  
+}
+
+.BLG2index {
+  padding: 0 5% 0 5%;
+  margin-left: 7.5%;
+  width: 85%;
+  height: 800px; /* Smaller height for the LV1index image */
+  object-fit: cover; /* Ensures the image covers the set height without distortion */
+  display: block;
+
+}
+
+/*PART FOR BLOG */
+
+.SRV-HOME {
+  padding: 0 5% 0 5%;
+  margin-left: 7.5%;
+  width: 85%;
+  height: 800px; /* Smaller height for the LV1index image */
+  object-fit: cover; /* Ensures the image covers the set height without distortion */
+  display: block;
+
+}
+/*PART FOR BLOG */
+
+
+.overlay-text {
+  padding:  4px;
+  border-radius: 5px;
+  width: 500px; /* Adjustable width */
+  height: 240px; /* Adjustable height */
+      
+  /* Optional: Center the overlay within the parent container */
+  letter-spacing: value;
+  display: inside;
+  align-items: center;
+  justify-content: center;
+  margin-right: 400px;
+}
+
+.overlay-text h1 {
+  width: 600px; /* Adjustable width */
+  height: 9px;
+  justify-self: left; 
+  font-weight: 700;
+
+  font-size: 45px;
+  color: #e9e5e5;
+  text-shadow: #2e2e2e;
+  margin: 0;
+}
+
+
+.overlay-text p {
+  color: #ddd7d7;
+  font-size: 20px;
+  font-weight:500;
+  margin: 25% 0 0 0;
+  justify-content: center;
+  margin-left: 10px; /* paragragh margin */
+  display: inline-block;
+  font-style: oblique;  
+}
+
+.button {
+  margin-right: 30%;
+  margin-top: 15px;
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #4D4DFF; /* Blue background color */
+  color: white; /* White text color */
+
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+  font-family: Arial, sans-serif; /* Similar font to the image */
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.button:hover {
+      background-color:transparent; /* Darker blue on hover */
+}
+
+
+/* MEDIA QUERIES FOR HOMEPAGE */
+@media (max-width: 1200px) {
+  .home {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 2px; /* Adjusted margin for smaller screens */
+  }
+
+  .homepage-image1 {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .home-content {
+    top: 24%; /* Adjusted vertical centering for smaller screens */
+    left: 40%; /* Adjusted horizontal centering for smaller screens */
+  }
+
+  .BLG2index {
+    width: 100%;
+    height: 520px; /* Reduced height for smaller screens */
+    object-fit: cover;
+    margin-left: 0%;
+    padding: 0 1% 0 1%;
+
+  }
+
+  /* BLOGSS*/
+  .SRV-HOME{
+    width: 100%;
+    height: 520px; /* Reduced height for smaller screens */
+    object-fit: cover;
+    margin-left: 0%;
+    padding: 0 1% 0 1%;
+
+  }
+  /* BLOGSS*/
+
+  .overlay-text {
+    width: 540px; /* Reduced width for smaller screens */
+    height: 190px; /* Reduced height for smaller screens */
+    padding: 5px;
+    border-radius: 3px;
+    margin-right: 200px;
+  }
+
+  .overlay-text h1 {
+    width: 500px; /* Reduced width for smaller screens */
+    font-size: 40px; /* Reduced font size for smaller screens */
+  }
+
+  .overlay-text p {
+    margin-top: 100px;
+    font-size: 18px; /* Reduced font size for smaller screens */
+    /* Adjusted margin for smaller screens */
+  }
+
+  .button {
+    margin-left: 0%; /* Adjusted margin for smaller screens */
+    margin-top: 10px; /* Adjusted margin for smaller screens */
+  }
+  
+  .button::before {
+    width: 90%; /* Adjusted width for smaller screens */
+    height: 90%; /* Adjusted height for smaller screens */
+  }
+
+  .button::after {
+    width: 90%; /* Adjusted width for smaller screens */
+    height: 90%; /* Adjusted height for smaller screens */
+  }
+
+  .button .dots_border {
+    --size_border: calc(100% + 2px); /* Reduced border size for smaller screens */
+  }
+
+  .button .sparkle {
+    width: 1.25rem; /* Reduced width for smaller screens */
+  }
+
+  .button .text_button {
+    font-size: 0.6rem; /* Reduced font size for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    margin-bottom: 2px; /* Adjusted margin for smaller screens */
+  }
+  
+  .homepage-image1 {
+    height: 300px; /* Adjusted height for smaller screens */
+  }
+  
+  .home-content {
+    top: 60%; /* Adjusted top position for smaller screens */
+    left: 40%; /* Adjusted left position for smaller screens */
+  }
+  
+  .BLG2index {
+    height: 400px; /* Adjusted height for smaller screens */
+  }
+
+   /* BLOGSS*/
+   .SRV-HOME{
+    height: 400px; /* Adjusted height for smaller screens */
+  }
+  /* BLOGSS*/
+  
+  .overlay-text {
+    width: 80%; /* Adjusted width for smaller screens */
+    height: 100px; /* Adjusted height for smaller screens */
+    margin-right: 20px; /* Adjusted margin for smaller screens */
+    font-size: 18px; /* Adjusted font size for smaller screens */
+  }
+  
+  .overlay-text h1 {
+    width: 400px; /* Adjustable width */
+    font-size: 30px; /* Adjusted font size for smaller screens */
+  }
+  
+  .overlay-text p {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+    margin-left: 10px; /* Adjusted margin for smaller screens */
+  }
+  
+  .button {
+    margin-left: 0%; /* Adjusted margin for smaller screens */
+    margin-top: 10px; /* Adjusted margin for smaller screens */
+    padding: 0.5rem 1rem; /* Adjusted padding for smaller screens */
+  }
+  
+  .button::before {
+    width: 90%; /* Adjusted width for smaller screens */
+    height: 90%; /* Adjusted height for smaller screens */
+  }
+  
+  .button::after {
+    width: 90%; /* Adjusted width for smaller screens */
+    height: 90%; /* Adjusted height for smaller screens */
+  }
+  
+  .button .dots_border {
+    --size_border: calc(90% + 2px); /* Adjusted size for smaller screens */
+  }
+  
+  .button .sparkle {
+    width: 1.25rem; /* Adjusted width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    margin-bottom: 1px; /* Adjusted margin for very small screens */
+  }
+  
+  .homepage-image1 {
+    height: 200px; /* Adjusted height for very small screens */
+  }
+  
+  .home-content {
+    top: 10%; /* Adjusted top position for very small screens */
+    left: 30%; /* Adjusted left position for very small screens */
+  }
+  
+  .BLG2index {
+    height: 300px; /* Adjusted height for very small screens */
+  }
+
+   /* BLOGSS*/
+   .SRV-HOME{
+     height: 300px; /* Adjusted height for very small screens */
+  }
+  /* BLOGSS*/
+  
+  .overlay-text {
+    width: 60%; /* Adjusted width for very small screens */
+    height: 80px; /* Adjusted height for very small screens */
+    margin-right: 10px; /* Adjusted margin for very small screens */
+    font-size: 14px; /* Adjusted font size for very small screens */
+  }
+  
+  .overlay-text h1 {
+    width: 300px; /* Adjustable width */
+    font-size: 24px; /* Adjusted font size for very small screens */
+  }
+  
+  .overlay-text p {
+    font-size: 12px; /* Adjusted font size for very small screens */
+    margin-left: 5px; /* Adjusted margin for very small screens */
+  }
+  
+  .button {
+    margin-left: 0%; /* Adjusted margin for very small screens */
+    margin-top: 5px; /* Adjusted margin for very small screens */
+    padding: 0.25rem 0.5rem; /* Adjusted padding for very small screens */
+  }
+  
+  .button::before {
+    width: 80%; /* Adjusted width for very small screens */
+    height: 80%; /* Adjusted height for very small screens */
+  }
+  
+  .button::after {
+    width: 80%; /* Adjusted width for very small screens */
+    height: 80%; /* Adjusted height for very small screens */
+  }
+  
+  .button .dots_border {
+    --size_border: calc(80% + 1px); /* Adjusted size for very small screens */
+  }
+  
+  .button .sparkle {
+    width: 1rem; /* Adjusted width for very small screens */
+  }
+}
+
+
+
+
+
+
+/*REGULAR CLEANING PART*/
+
+#cleaning-service-section {
+  background-color: #f2f2f2; /* Add a light gray background */
+  padding: 20px; /* Add some padding */
+}

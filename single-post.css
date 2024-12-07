@@ -1,0 +1,134 @@
+/* Blog Header Styles */
+
+.blog-header {
+  background-color: #2c3e50; /* Darker shade for better contrast */
+  color: #ecf0f1; /* Lighter text color */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.blog-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centered navigation */
+}
+
+.blog-header nav li {
+  margin: 0 15px; /* Reduced margin for better spacing */
+}
+
+.blog-header nav a {
+  color: #ecf0f1;
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+.blog-header nav a:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Blog Post Styles */
+.blog-main {
+  padding: 3% 10%; /* Reduced padding for better layout */
+}
+
+.blog-post {
+  background-color: #ffffff;
+  padding: 40px; /* Reduced padding */
+  margin: 20px 0; /* Vertical margin for spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.blog-post:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.post-header {
+  background-color: #ecf0f1; /* Lighter background for contrast */
+  padding: 15px; /* Added padding */
+  border-bottom: 2px solid #3498db; /* Blue accent line */
+}
+
+.post-title {
+  font-size: 28px; /* Larger title */
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #7f8c8d; /* Softer color */
+  margin-bottom: 15px; /* Space below meta */
+}
+
+.post-content {
+  padding: 20px 0; /* Vertical padding only */
+}
+
+.post-content p {
+  text-indent: 1.5em; /* Adjusted indent */
+  line-height: 1.6; /* Improved readability */
+}
+
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.post-footer {
+  background-color: #3498db; /* Blue background color */
+  color: #fff; /* White text for contrast */
+  padding: 15px; /* Increased padding */
+  border-top: 2px solid #2980b9; /* Darker blue accent line */
+  text-align: center; /* Centered text */
+}
+
+/* Blog Sidebar Styles */
+
+.blog-sidebar {
+  background-color: #ecf0f1; /* Lighter sidebar */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  float: right; /* Float sidebar to the right */
+}
+
+.blog-sidebar h3 {
+  margin-top: 0;
+  color: #2c3e50; /* Darker color for headers */
+}
+
+.blog-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-sidebar li {
+  margin-bottom: 10px;
+}
+
+.blog-sidebar li a {
+  color: #2c3e50; /* Dark text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.blog-sidebar li a:hover {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
